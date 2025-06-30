@@ -1,18 +1,26 @@
-header{
+header {
     position: sticky;
     padding: 5px 0 5px 0;
+    font-family: "Karla";
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 1.5px;
+    text-align: center;
+
 }
+
 .header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-bottom: 35px;
     padding-top: 35px;
+    padding: 0 10px;
 }
 
 .header__nav {
-    width: 320px;
-    margin-left: 500px;
+    max-width: 320px;
+    margin-left: auto;
 }
 
 .header__list {
@@ -22,6 +30,12 @@ header{
 
 .header__item {
     margin-right: 26px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .header__link {
@@ -36,11 +50,56 @@ header{
     }
 }
 
+.header__checkbox-label {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background: url(../../img/open.png) no-repeat center center;
+    cursor: pointer;
+}
+
+.header__checkbox:checked+.header__checkbox-label {
+    background: url(../../img/close.png) no-repeat center center;
+}
+
 .header__item-text {
     color: rgba(131, 125, 136, 1);
-    
+
     &:hover {
         color: black;
         transition: 900ms;
+    }
+}
+
+@media only screen and (max-width:614px) {
+    .header__item {
+        margin-right: 16px;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .header__menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 100px;
+        background-color: beige;
+    }
+
+    .header__checkbox-label {
+        display: block;
+        margin-left: auto;
+        padding: 24px;
+    }
+
+    .header__checkbox:checked~.header__menu {
+        display: block;
+        display: flex;
+    }
+    .header__list{
+        display: flex;
+        flex-direction: column;
+
     }
 }
