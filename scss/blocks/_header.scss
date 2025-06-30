@@ -1,3 +1,7 @@
+header{
+    position: sticky;
+    padding: 5px 0 5px 0;
+}
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -34,7 +38,7 @@
 
 .header__item-text {
     color: rgba(131, 125, 136, 1);
-
+    
     &:hover {
         color: black;
         transition: 900ms;

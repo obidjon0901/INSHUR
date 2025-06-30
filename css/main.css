@@ -33,6 +33,11 @@ a {
   margin: 0 auto;
 }
 
+header {
+  position: sticky;
+  padding: 5px 0 5px 0;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -149,4 +154,104 @@ a {
   margin-left: 80px;
   margin-top: 90px;
   margin-bottom: -90px;
+}
+
+.different {
+  margin-top: 305px;
+}
+
+.different__container {
+  position: relative;
+}
+.different__container::before {
+  width: 697px;
+  height: 649px;
+  content: "";
+  background-image: url(../../img/different-before.png);
+  background-repeat: no-repeat;
+}
+
+.different__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.different__title {
+  margin-bottom: 94px;
+}
+
+.different__item {
+  width: 350px;
+  padding-top: 118px;
+}
+.different__item:nth-child(1) {
+  position: relative;
+}
+.different__item:nth-child(1)::after {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  content: "";
+  background-color: rgb(150, 169, 198);
+  border-radius: 50%;
+  top: 12px;
+  background-image: url(../../img/different-img.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.different__item:nth-child(2) {
+  position: relative;
+}
+.different__item:nth-child(2)::after {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  content: "";
+  background-color: rgb(150, 169, 198);
+  border-radius: 50%;
+  top: 12px;
+  background-image: url(../../img/different-money-img.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.different__item:nth-child(3) {
+  position: relative;
+}
+.different__item:nth-child(3)::after {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  content: "";
+  background-color: rgb(150, 169, 198);
+  border-radius: 50%;
+  top: 12px;
+  background-image: url(../../img/different-user-img.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.different__item-title {
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.39px;
+  margin-bottom: 16px;
+}
+
+.different__item-text {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: rgb(131, 125, 136);
+}
+
+.title {
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
 }
