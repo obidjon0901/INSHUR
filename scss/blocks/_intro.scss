@@ -1,47 +1,45 @@
-.intro{
+.intro {
     background-color: $black;
-}
-.intro__container {
-    width: 1440px;
-    display: flex;
-    background-color: $black;
-    color: $white;
-    position: relative;
-    &::after{
-        position: absolute;
-        width: 150px;
-        height: 1px;
-        content: '';
-        background-color: $white;
-        top: 100px;
-        left: 100px;
-    }
      position: relative;
-     &::before{
+     max-width: 1440px;
+     margin: 0 auto;
+     padding-top: 150px;
+
+    &::after {
         position: absolute;
-        width: 697px;
-        height: 649px;
-        content: '';
-        top: 0px;
-        right: -100px;
-        background-image: url(../../img/intro-before.png);
+        width: 300px;
+        height: 600px;
+        content: "";
         background-repeat: no-repeat;
+        background-image: url(../../img/intro-after.png);
+        right: 0px;
+        top: 0px;
+    }
+
+    &::before {
+        position: absolute;
+        width: 200px;
+        height: 554px;
+        content: "";
+        background-repeat: no-repeat;
+        background-image: url(../../img/intro-before.png);
+        left: 00px;
+        top: 414px;
     }
 }
 
-.intro__title {
-    font-family: "DM Serif Display";
-    width: 540px;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 64px;
-    letter-spacing: -1px;
+.intro__container {
+    max-width: 1110px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: $black;
+    color: $white;
     
 }
 
+
 .intro__text {
     font-family: "Karla";
-    width: 540px;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -50,7 +48,7 @@
     margin-bottom: 24px;
 }
 
-.inrto__link {
+.intro__link {
     font-family: "Karla";
     font-weight: 700;
     font-size: 13px;
@@ -60,21 +58,106 @@
     color: $white;
     border: 1px solid white;
     padding: 13px 28px;
-    &:hover{
+
+    &:hover {
         background-color: $white;
         color: black;
         transition: 900ms;
     }
 }
 
-.intro__wrapper {
-    width: 540px;
-    margin-top: 169px;
-    margin-left: auto;
-    margin-bottom: 100px;
+.intro__title {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    padding-top: 63px;
+    color: white;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        content: '';
+        left: 0;
+        top: 0px;
+        background-color: $white;
+    }
 }
-.intro__img{
-    margin-left: 35px;
-    margin-top: 80px;
-    margin-bottom: -80px;
+
+.intro__wrapper {
+    max-width: 540px;
+    margin-right: 10px;
+    
+}
+
+.intro__img {
+    margin-bottom: -150px;
+}
+@media only screen and (max-width:1010px) {
+    .intro__img {
+        max-width: 430px;
+        object-fit: cover;
+
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .intro__title {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.67px;
+
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .intro {
+        padding-top: 0;
+        padding-bottom: 93px;
+      
+    }
+
+    .intro__container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .intro__img {
+        margin-bottom: 93px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .intro__wrapper{
+        text-align: center;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 24px;
+    }
+}
+@media only screen and (max-width:630px){
+    .intro{
+        &::after{
+            position: absolute;
+            width: 150px;
+            height: 352px;
+            content: "";
+            background-image: url(../../img/mobile-image.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+           top:calc(100% - 198px)
+
+        }
+    }
+    .intro__img{
+        z-index: 3;
+    }
+    .intro__title{
+        &::after{
+            display: none;
+        }
+    }
 }

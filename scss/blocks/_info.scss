@@ -1,0 +1,55 @@
+.info {
+    margin-bottom: 150px;
+
+}
+
+.info__container {
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 69px 80px 69px 80px;
+
+    &::after {
+        position: absolute;
+        width: 480px;
+        height: 250px;
+        content: "";
+        background: url(../../img/vector.png) no-repeat right center;
+        right: 0;
+        top: 0;
+    }
+}
+
+.info__title {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.78px;
+    color: white;
+    max-width: 475px;
+}
+
+.info__link {
+    border: 1px solid white;
+    color: white;
+    padding: 13px 24px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 1.5px;
+    &:hover{
+        background-color: white;
+        color:$black;
+        transition: 900ms;
+    }
+    z-index: 3;
+}
+@media only screen and (max-width:650px){
+    .info{
+        margin: 0;
+    }
+}
+@media only screen and (max-width:)
