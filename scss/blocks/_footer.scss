@@ -100,7 +100,9 @@
         flex-direction: column;
         align-items: center;
     }
-    .footer__container{
-        margin-left: auto;
-    }
 }
+@media only screen and (max-width:400px){
+    .footer__container{
+        align-items: center;
+    }
+} 
