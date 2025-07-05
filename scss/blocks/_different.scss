@@ -113,12 +113,12 @@
 @media only screen and (max-width:750px) {
     .different__list {
         flex-direction: column;
+        align-items: center;
         margin: 0;
-        margin-right:  auto;
+        margin: 0 auto;
     }
     .different{
-        margin: 0;
-        margin-right: auto;
+    
         text-align: center;
         padding: 140px 0;
     }
@@ -143,10 +143,10 @@
         }
     }
     .different__title{
-        max-width: 327px;
+        font-size: 48px;
         &::after{
-            bottom: 50px;
-            left: 114px;
+           left: 40%;
+           top: -50px;
         }
     }
 }

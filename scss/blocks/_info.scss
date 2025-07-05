@@ -40,16 +40,38 @@
     font-size: 13px;
     line-height: 100%;
     letter-spacing: 1.5px;
-    &:hover{
+
+    &:hover {
         background-color: white;
-        color:$black;
+        color: $black;
         transition: 900ms;
     }
+
     z-index: 3;
 }
-@media only screen and (max-width:650px){
-    .info{
+
+@media only screen and (max-width:800px) {
+    .info {
         margin: 0;
+        padding: 0;
+    }
+
+    .info__container {
+        flex-direction: column;
+        padding: 72px 24px;
+
+        &::after {
+            width: 176pxpx;
+            height: 324px;
+            right: 0px;
+            background-image: url(../../img/info-after.png);
+
+        }
+    }
+     .info__title {
+        font-size: 40px;
+        max-width: 279px;
+        text-align: center;
+        margin-bottom: 40px;
     }
 }
-@media only screen and (max-width:)

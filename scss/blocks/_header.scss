@@ -110,16 +110,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        // position: relative;
-        // &::after{
-        //     position: absolute;
-        //     width: ;
-        //     height: ;
-        //     content: '';
-        //     bottom: 0;
-        //     background-image: url(../../img/hamburger-after.png);
-        //     background-repeat: no-repeat;
-        // }
+        z-index: 3;
     }
 
     .header__list {
