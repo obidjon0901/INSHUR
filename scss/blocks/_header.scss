@@ -1,9 +1,5 @@
-header {
-    position: sticky;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+.header {
+    padding: 5px 0 5px 0;
     font-family: "Karla";
     font-weight: 700;
     font-size: 13px;
@@ -34,7 +30,19 @@ header {
 .header__item {
     margin-right: 26px;
 }
+.header__item-link {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 1.5px;
+    color: rgb(130, 124, 136);
 
+    &:hover {
+        color: black;
+        transition: 3000ms;
+    }
+
+}
 .header__menu {
     display: flex;
     align-items: center;
@@ -49,11 +57,13 @@ header {
     &:hover {
         background-color: black;
         color: white;
-        transition: 900ms;
+        transition: 3000ms;
     }
 }
 
-.header__checkbox-label {
+
+
+.header__label {
     display: none;
     width: 32px;
     height: 32px;
@@ -61,17 +71,8 @@ header {
     cursor: pointer;
 }
 
-.header__checkbox:checked+.header__checkbox-label {
+.header__checkbox:checked + .header__label {
     background: url(../../img/close.png) no-repeat center center;
-}
-
-.header__item-link {
-    color: rgba(131, 125, 136, 1);
-
-    &:hover {
-        color: black;
-        transition: 900ms;
-    }
 }
 
 @media only screen and (max-width:614px) {
@@ -80,7 +81,7 @@ header {
     }
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:630px) {
     .header__menu {
         display: none;
         position: absolute;
@@ -94,24 +95,24 @@ header {
         line-height: 40px;
         letter-spacing: 1.36px;
         text-align: center;
-        background-color: rgba(45, 38, 65, 1);
+        background-color: black;
         color: white;
         right: 0;
     }
-
-    .header__checkbox-label {
+    .header__label {
         display: block;
         margin-left: auto;
         padding: 24px;
+        
     }
 
-    .header__checkbox:checked~.header__menu {
-        width: 100%;
+    .header__checkbox:checked ~ .header__menu {
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 3;
-        top:50px;
+        z-index: 4;
+        top: 50px;
     }
 
     .header__list {
@@ -120,15 +121,14 @@ header {
         flex-direction: column;
         text-align: center;
     }
-    .header__item-link{
-        color: rgba(255, 255, 255, 1);
-    }
+  .header__link {
+    color: white;
+    border: 1px solid white;
+    padding: 13px 28px 12px;
+    display: flex;
+    justify-content: center;
+  }
     .header__nav {
         margin: 0;
-    }
-
-    .header__link {
-        border: 1px solid rgba(255, 255, 255, 1);
-        color: rgba(255, 255, 255, 1);
     }
 }

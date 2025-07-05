@@ -14,6 +14,7 @@
         background-image: url(../../img/intro-after.png);
         right: 0px;
         top: 0px;
+        z-index: 0;
     }
 
     &::before {
@@ -25,6 +26,7 @@
         background-image: url(../../img/intro-before.png);
         left: 00px;
         top: 414px;
+        z-index: 0;
     }
 }
 
@@ -151,9 +153,7 @@
 
         }
     }
-    .intro__img{
-        z-index: 3;
-    }
+ 
     .intro__title{
         &::after{
             display: none;

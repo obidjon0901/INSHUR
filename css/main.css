@@ -57,12 +57,8 @@ a {
   padding: 0 10px;
 }
 
-header {
-  position: sticky;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+.header {
+  padding: 5px 0 5px 0;
   font-family: "Karla";
   font-weight: 700;
   font-size: 13px;
@@ -93,6 +89,18 @@ header {
   margin-right: 26px;
 }
 
+.header__item-link {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 1.5px;
+  color: rgb(130, 124, 136);
+}
+.header__item-link:hover {
+  color: black;
+  transition: 3000ms;
+}
+
 .header__menu {
   display: flex;
   align-items: center;
@@ -107,10 +115,10 @@ header {
 .header__link:hover {
   background-color: black;
   color: white;
-  transition: 900ms;
+  transition: 3000ms;
 }
 
-.header__checkbox-label {
+.header__label {
   display: none;
   width: 32px;
   height: 32px;
@@ -118,16 +126,8 @@ header {
   cursor: pointer;
 }
 
-.header__checkbox:checked + .header__checkbox-label {
+.header__checkbox:checked + .header__label {
   background: url(../../img/close.png) no-repeat center center;
-}
-
-.header__item-link {
-  color: rgb(131, 125, 136);
-}
-.header__item-link:hover {
-  color: black;
-  transition: 900ms;
 }
 
 @media only screen and (max-width: 614px) {
@@ -135,7 +135,7 @@ header {
     margin-right: 16px;
   }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 630px) {
   .header__menu {
     display: none;
     position: absolute;
@@ -149,21 +149,21 @@ header {
     line-height: 40px;
     letter-spacing: 1.36px;
     text-align: center;
-    background-color: rgb(45, 38, 65);
+    background-color: black;
     color: white;
     right: 0;
   }
-  .header__checkbox-label {
+  .header__label {
     display: block;
     margin-left: auto;
     padding: 24px;
   }
   .header__checkbox:checked ~ .header__menu {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 3;
+    z-index: 4;
     top: 50px;
   }
   .header__list {
@@ -172,15 +172,15 @@ header {
     flex-direction: column;
     text-align: center;
   }
-  .header__item-link {
-    color: rgb(255, 255, 255);
+  .header__link {
+    color: white;
+    border: 1px solid white;
+    padding: 13px 28px 12px;
+    display: flex;
+    justify-content: center;
   }
   .header__nav {
     margin: 0;
-  }
-  .header__link {
-    border: 1px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
   }
 }
 .intro {
@@ -199,6 +199,7 @@ header {
   background-image: url(../../img/intro-after.png);
   right: 0px;
   top: 0px;
+  z-index: 0;
 }
 .intro::before {
   position: absolute;
@@ -209,6 +210,7 @@ header {
   background-image: url(../../img/intro-before.png);
   left: 0px;
   top: 414px;
+  z-index: 0;
 }
 
 .intro__container {
@@ -321,9 +323,6 @@ header {
     background-repeat: no-repeat;
     background-position: right bottom;
     top: calc(100% - 198px);
-  }
-  .intro__img {
-    z-index: 3;
   }
   .intro__title::after {
     display: none;
