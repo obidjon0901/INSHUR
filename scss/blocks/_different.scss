@@ -22,8 +22,13 @@
 }
 
 .different__title {
-    margin-bottom: 94px;
+    margin-bottom: 54px;
     position: relative;
+    font-family: DM Serif Display;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -1px;
 
     &::after {
         position: absolute;
@@ -117,36 +122,40 @@
         margin: 0;
         margin: 0 auto;
     }
-    .different{
-    
+
+    .different {
         text-align: center;
         padding: 140px 0;
     }
-    .different__item{
+
+    .different__item {
         &:nth-child(1) {
-            &::after{
+            &::after {
                 left: 124px;
             }
 
         }
+
         &:nth-child(2) {
-            &::after{
+            &::after {
                 left: 124px;
             }
 
         }
+
         &:nth-child(3) {
-            &::after{
+            &::after {
                 left: 124px;
             }
 
         }
     }
-    .different__title{
+
+    .different__title {
         font-size: 48px;
-        &::after{
-           left: 40%;
-           top: -50px;
+
+        &::after {
+            display: none;
         }
     }
 }

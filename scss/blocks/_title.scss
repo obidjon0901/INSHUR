@@ -5,3 +5,13 @@
     line-height: 64px;
     letter-spacing: -1px;
 }
+
+@media only screen and (max-width:500px) {
+    .title {
+        font-family: "DM Serif Display";
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: -1px;
+    }
+}

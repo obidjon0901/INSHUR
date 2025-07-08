@@ -351,8 +351,13 @@ a {
 }
 
 .different__title {
-  margin-bottom: 94px;
+  margin-bottom: 54px;
   position: relative;
+  font-family: DM Serif Display;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
 }
 .different__title::after {
   position: absolute;
@@ -456,8 +461,7 @@ a {
     font-size: 48px;
   }
   .different__title::after {
-    left: 40%;
-    top: -50px;
+    display: none;
   }
 }
 .title {
@@ -468,6 +472,15 @@ a {
   letter-spacing: -1px;
 }
 
+@media only screen and (max-width: 500px) {
+  .title {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -1px;
+  }
+}
 .info {
   margin-bottom: 150px;
 }
@@ -593,6 +606,7 @@ a {
   margin-bottom: 20px;
   letter-spacing: 1px;
   color: #555;
+  margin-top: 15px;
 }
 
 .footer__list {
@@ -602,6 +616,7 @@ a {
 }
 
 .footer__item {
+  font-family: "karla";
   font-size: 13px;
   color: #777;
   margin-bottom: 12px;
@@ -611,6 +626,11 @@ a {
 
 .footer__item:hover {
   color: #000;
+}
+
+.footer__svg {
+  margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .footer__socials {
@@ -630,17 +650,18 @@ a {
   color: #000;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 760px) {
   .footer__wrapper {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+    border-bottom: 1px solid rgb(218, 218, 218);
   }
-}
-@media only screen and (max-width: 400px) {
   .footer__container {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    text-align: center;
   }
 }
